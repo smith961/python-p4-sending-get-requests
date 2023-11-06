@@ -5,6 +5,10 @@ url = "https://learn-co-curriculum.github.io/json-site-example/endpoints/locatio
 
 response = requests.get(url)
 
+# print(response.text)
+
+# print(response.content)
+
 json_content = json.loads(response.text)
 
-print(json.dumps(json_content, indent=4))
+print(json.dumps(json_content, indent=4, sort_keys=True))
